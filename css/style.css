@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navigation {
+    font-family: var(--font1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left{
+    font-size: 35px;
+    display: flex;
+}
+
+.nav-left ul {
+    display: flex;
+    align-items: center;
+    margin: 0 75px;
+    font-size: 23px;
+}
+
+.nav-left ul li {
+    list-style: none;
+    margin: 0 14px;
+    font-family: cursive;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-left ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-left ul li a:hover{
+    color: var(--main-bg-color);
+    font-weight: bolder;
+}
+
+.content{
+    height: 100%;
+    display: flex;
+    margin-top: 32px;
+    padding: 9px;
+    position: relative;
+}
+
+.content::after{
+    content: "";
+    background-image: url('../img/images3.jpg');
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    opacity: 0.2;
+    border-radius: 12px;
+}
+
+.content-left{
+    font-family: var(--font1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    z-index: 1;
+}
+
+.content-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-right img{
+    height: 355px;
+    border: 2px solid black;
+    border-radius: 200px;
+}
+
+.home-articles{
+    background-color: rgba(248, 239, 239, 0.5);
+    padding: 15px;
+    margin-top: 23px;
+    position: relative;
+}
+
+.home-article{
+    display: flex;
+    margin : 25px;
+}
+
+.home-article img{
+    width: 200px;
+}
+
+.home-article-content{
+    align-self: center;
+    padding: 0 25px;
+}
+
+.home-article-content a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer{
+    height: 50px;
+    background-color: var(--main-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+}
+
+.footer a{
+    color: white;
+}
+
+/* Mobile.css */
+
+@media screen and (max-width:1200px){
+    .navigation{
+        flex-direction: column;
+        margin-bottom: 23px;
+    }
+
+    .nav-left{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-right{
+        display: none;
+    }
+
+    .home-article{
+        flex-direction: column;
+    }
+
+    .home-article-img{
+        text-align: center;
+    }
+
+    .home-article img{
+        width: 70vw;
+    }
+
+    .form-input{
+        width: 45%;
+    }
+    
+    .form-box input, textarea{
+        width: 66vw;
+    }
+}
+
+
+/* contact.css */
+
+.contact-content{
+    height: 100vh;
+    margin-top: 32px;
+    padding: 9px;
+    position: relative;
+}
+
+.contact-content::after{
+    content: "";
+    background-image: url('../img/images.jpg');
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    opacity: 0.2;
+    border-radius: 12px;
+    z-index: -1;
+}
+
+/* utils.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Baloo+Thambi+2&display=swap');
+
+:root{
+    --main-bg-color:brown;
+    --font1: font-family: 'Baloo Thambi 2', cursive;
+    --font2: font-family: 'Roboto', sans-serif;
+}
+
+.font1{
+    font-family: var(--font1);
+}
+
+.font2{
+    font-family: var(--font2);
+}
+
+.max-width-1{
+    max-width: 80vw;
+}
+
+.max-width-2{
+    max-width: 60vw;
+}
+
+.m-auto{
+    margin: auto;
+}
+
+.btn{
+    padding: 0 20px;
+    padding-top: 3px;
+    border: 2px solid black;
+    border-radius: 6px;
+    font-family: var(--font1);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover{
+    color:white;
+    background-color: var(--main-bg-color);
+}
+
+.form-input {
+    margin: 0 13px;
+    padding-top: 3px;
+    padding: 0 5px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 6px;
+    font-family: var(--font1);
+}
+
+.form-box input, textarea{
+   margin: 8px 0;
+   width: 52vw;
+   padding: 10px 6px;
+
+}
